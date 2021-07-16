@@ -35,7 +35,7 @@
                                 "image": "seldonio/alibi-detect-server:1.9.1",
                                 "args": [
                                     "--model_name",
-                                    "cifar10",
+                                    "cifar10-classifier",
                                     "--http_port",
                                     "8080",
                                     "--protocol",
