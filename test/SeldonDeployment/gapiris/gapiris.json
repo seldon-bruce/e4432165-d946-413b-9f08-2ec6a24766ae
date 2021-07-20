@@ -67,7 +67,41 @@
                 },
                 "engineResources": {},
                 "svcOrchSpec": {},
-                "traffic": 100
+                "traffic": 78
+            },
+            {
+                "name": "canary",
+                "graph": {
+                    "name": "gapiris-container",
+                    "implementation": "XGBOOST_SERVER",
+                    "modelUri": "gs://seldon-models/xgboost/iris",
+                    "logger": {
+                        "mode": "all"
+                    }
+                },
+                "componentSpecs": [
+                    {
+                        "metadata": {
+                            "creationTimestamp": "2021-07-20T16:09:55Z"
+                        },
+                        "spec": {
+                            "containers": [
+                                {
+                                    "name": "gapiris-container",
+                                    "resources": {}
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "replicas": 1,
+                "annotations": {
+                    "project.seldon.io/gapiris-container": "default",
+                    "seldon.io/canary": "true"
+                },
+                "engineResources": {},
+                "svcOrchSpec": {},
+                "traffic": 22
             }
         ],
         "annotations": {
